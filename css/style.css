@@ -122,6 +122,24 @@ body {
   src: url("../fonts/roboto/700/roboto-v30-latin-700.eot"); /* IE9 Compat Modes */
   src: url("../fonts/roboto/700/roboto-v30-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/700/roboto-v30-latin-700.woff2") format("woff2"), url("../fonts/roboto/700/roboto-v30-latin-700.woff") format("woff"), url("../fonts/roboto/700/roboto-v30-latin-700.ttf") format("truetype"), url("../fonts/roboto/700/roboto-v30-latin-700.svg#Roboto") format("svg"); /* Legacy iOS */
 }
+/* roboto-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/roboto/800/roboto-v30-latin-900.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/roboto/800/roboto-v30-latin-900.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/800/roboto-v30-latin-900.woff2") format("woff2"), url("../fonts/roboto/800/roboto-v30-latin-900.woff") format("woff"), url("../fonts/roboto/800/roboto-v30-latin-900.ttf") format("truetype"), url("../fonts/roboto/800/roboto-v30-latin-900.svg#Roboto") format("svg"); /* Legacy iOS */
+}
+/* playfair-display-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/playfair-display/600/playfair-display-v30-latin-600.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/playfair-display/600/playfair-display-v30-latin-600.eot?#iefix") format("embedded-opentype"), url("../fonts/playfair-display/600/playfair-display-v30-latin-600.woff2") format("woff2"), url("../fonts/playfair-display/600/playfair-display-v30-latin-600.woff") format("woff"), url("../fonts/playfair-display/600/playfair-display-v30-latin-600.ttf") format("truetype"), url("../fonts/playfair-display/600/playfair-display-v30-latin-600.svg#PlayfairDisplay") format("svg"); /* Legacy iOS */
+}
 .icon {
   width: 2.4rem;
   height: 2.4rem;
@@ -134,6 +152,11 @@ body {
 }
 .icon--social {
   transform: rotate(-90deg);
+}
+.icon--arrow {
+  width: 1.6rem;
+  right: -3.6rem;
+  left: auto;
 }
 
 /* Blocks */
@@ -268,4 +291,65 @@ body {
 }
 .header__slider-item.active:after {
   opacity: 1;
+}
+
+.intro {
+  background-image: url("../img/intro.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.intro__inner {
+  width: 96rem;
+  height: 145rem;
+  margin: 0 auto;
+  padding-top: 29rem;
+}
+
+.intro__suptitle {
+  margin-bottom: 3.2rem;
+  padding-left: 10.4rem;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 1.8rem;
+  line-height: normal;
+  color: #FBD784;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  position: relative;
+}
+.intro__suptitle:before {
+  content: "";
+  display: block;
+  width: 7.2rem;
+  height: 0.2rem;
+  background-color: #FBD784;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translate(0, -50%);
+}
+
+.intro__title {
+  margin-bottom: 3.2rem;
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-size: 8.8rem;
+  line-height: 1.14;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.intro__button {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: normal;
+  color: #fff;
+  position: relative;
+}
+.intro__button:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
