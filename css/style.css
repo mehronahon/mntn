@@ -86,6 +86,10 @@ legend {
 }
 
 /* Font */
+html {
+  cursor: default;
+}
+
 html, body {
   font-size: 10px;
 }
@@ -122,9 +126,14 @@ body {
   width: 2.4rem;
   height: 2.4rem;
   fill: #fff;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  z-index: 1;
+  transition: fill 0.1s linear;
 }
-.icon--cart {
-  margin-right: 1rem;
+.icon--social {
+  transform: rotate(-90deg);
 }
 
 /* Blocks */
@@ -138,6 +147,15 @@ body {
 }
 
 .header__inner {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: normal;
+  color: #fff;
+  position: relative;
+}
+
+.header__menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -174,4 +192,80 @@ body {
 }
 .header__account:hover {
   text-decoration: underline;
+}
+.header__account:hover .header__element {
+  background-color: #fff;
+}
+.header__account:hover .icon {
+  fill: #0B1D26;
+}
+
+.header__element {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  transition: background-color 0.1s linear;
+}
+.header__element--account {
+  margin-right: 1rem;
+}
+.header__element--social {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.header__element--social:hover {
+  background-color: #fff;
+}
+.header__element--social:hover .icon {
+  fill: #0B1D26;
+}
+
+.header__sidebar {
+  position: absolute;
+}
+.header__sidebar--social {
+  display: flex;
+  align-items: center;
+  top: 36rem;
+  left: -7.3rem;
+  transform: rotate(90deg);
+}
+.header__sidebar--slider {
+  top: 34rem;
+  right: 0.3rem;
+}
+
+.header__slider-item {
+  display: block;
+  padding: 1.9rem 3.2rem;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: normal;
+  color: #fff;
+  text-align: right;
+  position: relative;
+  transition: background-color 0.1s linear, color 0.1s linear;
+}
+.header__slider-item:hover {
+  background-color: #fff;
+  color: #0B1D26;
+}
+.header__slider-item:after {
+  content: "";
+  display: block;
+  width: 0.3rem;
+  height: 6rem;
+  background-color: #fff;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: -0.3rem;
+  z-index: 1;
+}
+.header__slider-item.active:after {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
