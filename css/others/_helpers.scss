@@ -11,6 +11,10 @@ html, body {
 
 
 body {
+    background-image: url("../img/intro.jpg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: $main;
 }
 
@@ -33,4 +37,9 @@ body {
     max-width: 178rem;
     margin: 0 auto;
     padding: 0 1rem;
+
+
+    &--section {
+        max-width: 148rem;
+    }
 }

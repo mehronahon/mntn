@@ -1,15 +1,6 @@
 .intro {
-    background-image: url("../img/intro.jpg");
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-
-
-.intro__inner {
     width: 96rem;
-    height: 145rem;
+    height: 193rem;
     margin: 0 auto;
     padding-top: 29rem;
 }
@@ -17,31 +8,9 @@
 
 
 .intro__suptitle {
+    @include suptitle;
     margin-bottom: 3.2rem;
     padding-left: 10.4rem;
-
-    @include font('Roboto', 900, 1.8rem, normal, $beige);
-    letter-spacing: .3em;
-    text-transform: uppercase;
-
-    position: relative;
-
-
-    &:before {
-        content: '';
-        display: block;
-        width: 7.2rem;
-        height: .2rem;
-
-        background-color: $beige;
-
-        position: absolute;
-        top: 50%;
-        left: 0;
-        z-index: 1;
-
-        transform: translate(0, -50%);
-    }
 }
 
 

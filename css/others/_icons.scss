@@ -22,4 +22,14 @@
         right: -3.6rem;
         left: auto;
     }
+
+    &--section {
+        fill: $beige;
+
+        top: 0;
+        left: auto;
+        right: -3.4rem;
+
+        transform: rotate(-90deg);
+    }
 }

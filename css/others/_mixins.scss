@@ -6,3 +6,31 @@
     line-height: $lh;
     color: $cl;
 }
+
+
+
+/* Suptitle */
+@mixin suptitle {
+    @include font('Roboto', 900, 1.8rem, normal, $beige);
+    letter-spacing: .3em;
+    text-transform: uppercase;
+
+    position: relative;
+
+
+    &:before {
+        content: '';
+        display: block;
+        width: 7.2rem;
+        height: .2rem;
+
+        background-color: $beige;
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+
+        transform: translate(0, -50%);
+    }
+}
