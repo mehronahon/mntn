@@ -1,0 +1,177 @@
+/* Others */ /* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+/* Font */
+html, body {
+  font-size: 10px;
+}
+
+body {
+  background-color: #0B1D26;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.page {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 178rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto/700/roboto-v30-latin-700.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/roboto/700/roboto-v30-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/700/roboto-v30-latin-700.woff2") format("woff2"), url("../fonts/roboto/700/roboto-v30-latin-700.woff") format("woff"), url("../fonts/roboto/700/roboto-v30-latin-700.ttf") format("truetype"), url("../fonts/roboto/700/roboto-v30-latin-700.svg#Roboto") format("svg"); /* Legacy iOS */
+}
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  fill: #fff;
+}
+.icon--cart {
+  margin-right: 1rem;
+}
+
+/* Blocks */
+.header {
+  width: 100%;
+  margin-top: 6.4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  display: inline-block;
+}
+
+.header__nav-link {
+  margin-right: 4rem;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: normal;
+  color: #fff;
+}
+.header__nav-link:last-child {
+  margin-right: 0;
+}
+.header__nav-link:hover {
+  text-decoration: underline;
+}
+
+.header__account {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: normal;
+  color: #fff;
+  cursor: pointer;
+}
+.header__account:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

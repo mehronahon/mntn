@@ -1,0 +1,30 @@
+html, body {
+    font-size: 10px;
+}
+
+
+
+body {
+    background-color: $main;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+.page {
+    overflow: hidden;
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 178rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}

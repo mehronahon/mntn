@@ -1,0 +1,61 @@
+.header {
+    width: 100%;
+    margin-top: 6.4rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+// .header__logo {}
+
+
+
+.header__nav {
+    display: inline-block;
+}
+
+
+
+.header__nav-link {
+    margin-right: 4rem;
+
+    @include font('Roboto', 700, 1.8rem, normal, $white);
+
+
+    &:last-child {
+        margin-right: 0
+    }
+
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+.header__account {
+    display: flex;
+    align-items: center;
+
+    @include font('Roboto', 700, 1.7rem, normal, $white);
+
+    cursor: pointer;
+
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
