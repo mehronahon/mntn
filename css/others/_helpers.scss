@@ -2,13 +2,10 @@ html {
     cursor: default;
 }
 
-
-
-html, body {
+html,
+body {
     font-size: 10px;
 }
-
-
 
 body {
     background-image: url("../img/intro.jpg");
@@ -18,19 +15,13 @@ body {
     background-color: $main;
 }
 
-
-
 ::-webkit-scrollbar {
     width: 0;
 }
 
-
-
 .page {
     overflow: hidden;
 }
-
-
 
 .container {
     width: 100%;
@@ -38,8 +29,8 @@ body {
     margin: 0 auto;
     padding: 0 1rem;
 
-
-    &--section {
+    &--section,
+    &--footer {
         max-width: 148rem;
     }
 }

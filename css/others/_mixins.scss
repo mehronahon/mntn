@@ -7,22 +7,19 @@
     color: $cl;
 }
 
-
-
 /* Suptitle */
 @mixin suptitle {
-    @include font('Roboto', 900, 1.8rem, normal, $beige);
-    letter-spacing: .3em;
+    @include font("Roboto", 900, 1.8rem, normal, $beige);
+    letter-spacing: 0.3em;
     text-transform: uppercase;
 
     position: relative;
 
-
     &:before {
-        content: '';
+        content: "";
         display: block;
         width: 7.2rem;
-        height: .2rem;
+        height: 0.2rem;
 
         background-color: $beige;
 

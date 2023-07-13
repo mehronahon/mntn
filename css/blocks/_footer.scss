@@ -1,0 +1,53 @@
+.footer {
+    display: flex;
+    margin-bottom: 12rem;
+}
+
+.footer__col {
+    &--1 {
+        width: 60%;
+    }
+
+    &--2 {
+        width: 28%;
+    }
+
+    &--3 {
+        width: 12%;
+    }
+}
+
+.footer__logo {
+    margin-bottom: 2.4rem;
+}
+
+.footer__text {
+    margin-bottom: 12.2rem;
+
+    @include font("Roboto", 700, 1.8rem, 1.8, $white);
+}
+
+.footer__copyright {
+    @include font("Roboto", 500, 1.8rem, 1.8, rgba($white, 0.5));
+}
+
+.footer__title {
+    margin-bottom: 2.4rem;
+
+    @include font("Roboto", 700, 2.4rem, 1.3, $beige);
+}
+
+.footer__link {
+    display: block;
+    margin-bottom: 1.6rem;
+
+    @include font("Roboto", 500, 1.8rem, 1.8, $white);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
