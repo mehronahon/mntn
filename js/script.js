@@ -1,14 +1,24 @@
-/* Fixed Header */
-["load", "resize", "scroll"].forEach(function (event) {
-    const header = document.getElementById("header");
+$(function () {
+    // Fixed Header
+    const header = $("#header");
+    const intro = $("#intro");
+    let introH;
+    let scrollPos;
 
-    window.addEventListener(event, function () {
-        let scrollPos = window.scrollY;
-
-        if (scrollPos > 0) {
-            header.classList.add("fixed");
+    const checkScroll = function (scrollPos, introH) {
+        if (scrollPos > introH) {
+            header.addClass("fixed");
         } else {
-            header.classList.remove("fixed");
+            header.removeClass("fixed");
         }
+    };
+
+    $(window).on("load resize scroll", function () {
+        introH = intro.innerHeight();
+        scrollPos = $(this).scrollTop();
+
+        checkScroll(scrollPos, introH);
     });
+
+    checkScroll(scrollPos, introH);
 });
