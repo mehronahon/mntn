@@ -167,8 +167,8 @@ body {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/roboto/800/roboto-v30-latin-900.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/roboto/800/roboto-v30-latin-900.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/800/roboto-v30-latin-900.woff2") format("woff2"), url("../fonts/roboto/800/roboto-v30-latin-900.woff") format("woff"), url("../fonts/roboto/800/roboto-v30-latin-900.ttf") format("truetype"), url("../fonts/roboto/800/roboto-v30-latin-900.svg#Roboto") format("svg"); /* Legacy iOS */
+  src: url("../fonts/roboto/900/roboto-v30-latin-900.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/roboto/900/roboto-v30-latin-900.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/900/roboto-v30-latin-900.woff2") format("woff2"), url("../fonts/roboto/900/roboto-v30-latin-900.woff") format("woff"), url("../fonts/roboto/900/roboto-v30-latin-900.ttf") format("truetype"), url("../fonts/roboto/900/roboto-v30-latin-900.svg#Roboto") format("svg"); /* Legacy iOS */
 }
 /* playfair-display-600 - latin */
 @font-face {
@@ -213,6 +213,13 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
+}
+.header.fixed {
+  margin-top: 0;
+  padding: 2rem 0;
+  background-color: #0b1d26;
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  position: fixed;
 }
 
 .header__inner {
