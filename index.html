@@ -116,13 +116,34 @@
                             </div>
                         </div>
 
-                        <div class="header__sidebar header__sidebar--slider">
-                            <a class="header__slider-item active" href="#"
+                        <div
+                            class="header__sidebar header__sidebar--slider"
+                            id="slider"
+                        >
+                            <a
+                                class="header__slider-item active"
+                                href="#"
+                                data-scroll="#intro"
                                 >Start</a
                             >
-                            <a class="header__slider-item" href="#">01</a>
-                            <a class="header__slider-item" href="#">02</a>
-                            <a class="header__slider-item" href="#">03</a>
+                            <a
+                                class="header__slider-item"
+                                href="#"
+                                data-scroll="#section_1"
+                                >01</a
+                            >
+                            <a
+                                class="header__slider-item"
+                                href="#"
+                                data-scroll="#section_2"
+                                >02</a
+                            >
+                            <a
+                                class="header__slider-item"
+                                href="#"
+                                data-scroll="#section_3"
+                                >03</a
+                            >
                         </div>
                     </div>
                     <!-- /.header__inner -->
@@ -140,7 +161,12 @@
                         Mountains and beyond!
                     </h1>
 
-                    <a class="intro__button" href="#">
+                    <a
+                        class="intro__button"
+                        id="introBtn"
+                        href="#"
+                        data-active="#footer"
+                    >
                         scroll down
                         <svg class="icon icon--arrow">
                             <use xlink:href="#arrow"></use>
@@ -153,7 +179,7 @@
             <!-- 3.Sections -->
             <div class="container container--section">
                 <!-- 01 -->
-                <section class="section">
+                <section class="section" id="section_1">
                     <div class="section__content">
                         <div class="section__number">01</div>
                         <h3 class="section__suptitle">Get started</h3>
@@ -187,7 +213,7 @@
                 <!-- /.01 -->
 
                 <!-- 02 -->
-                <section class="section section--even">
+                <section class="section section--even" id="section_2">
                     <div class="section__content">
                         <div class="section__number">02</div>
                         <h3 class="section__suptitle">Hiking Essentials</h3>
@@ -220,7 +246,7 @@
                 <!-- /.02 -->
 
                 <!-- 03 -->
-                <section class="section">
+                <section class="section" id="section_3">
                     <div class="section__content">
                         <div class="section__number">03</div>
                         <h3 class="section__suptitle">
@@ -257,7 +283,7 @@
             <!-- /.container -->
 
             <!-- 4.Footer -->
-            <div class="container container--footer">
+            <div class="container container--footer" id="footer">
                 <footer class="footer">
                     <div class="footer__col footer__col--1">
                         <img

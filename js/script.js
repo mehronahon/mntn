@@ -6,7 +6,7 @@ $(function () {
     let scrollPos;
 
     const checkScroll = function (scrollPos, introH) {
-        if (scrollPos > introH) {
+        if (scrollPos + 81 > introH) {
             header.addClass("fixed");
         } else {
             header.removeClass("fixed");
@@ -21,4 +21,45 @@ $(function () {
     });
 
     checkScroll(scrollPos, introH);
+
+    // Smooth Scroll
+    const slider = $("#slider");
+    const introBtn = $("#introBtn");
+
+    $("[data-scroll]").on("click", function (event) {
+        event.preventDefault();
+
+        let element = $(this);
+        let elementId = element.data("scroll");
+        let elementOffset = $(elementId).offset().top;
+
+        slider.removeClass("show");
+
+        $("html, body").animate(
+            {
+                scrollTop: elementOffset - 80,
+            },
+            700
+        );
+
+        $("#slider a").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $("[data-active]").on("click", function (event) {
+        event.preventDefault();
+
+        let element = $(this);
+        let elementId = element.data("active");
+        let elementOffset = $(elementId).offset().top;
+
+        introBtn.removeClass("show");
+
+        $("html, body").animate(
+            {
+                scrollTop: elementOffset - 80,
+            },
+            700
+        );
+    });
 });
