@@ -31,3 +31,14 @@
         transform: translate(0, -50%);
     }
 }
+
+// Burger Element
+@mixin burger-element {
+    content: "";
+    display: block;
+    background-color: $white;
+
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
