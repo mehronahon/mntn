@@ -62,4 +62,20 @@ $(function () {
             700
         );
     });
+
+    // Nav Toggle
+    const nav = $("#nav");
+    const burger = $("#burger");
+
+    $(burger).on("click", function (event) {
+        event.preventDefault();
+
+        nav.toggleClass("active");
+
+        if (burger.hasClass("active")) {
+            burger.removeClass("active");
+        } else {
+            burger.addClass("active");
+        }
+    });
 });
