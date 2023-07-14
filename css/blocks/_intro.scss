@@ -3,12 +3,37 @@
     height: 230rem;
     margin: 0 auto;
     padding-top: 29rem;
+
+    @media (max-width: $xxl) {
+        width: 72rem;
+        height: 143rem;
+    }
+
+    @media (max-width: $lg) {
+        width: 48rem;
+        height: 116rem;
+
+        text-align: center;
+    }
 }
 
 .intro__suptitle {
     @include suptitle;
     margin-bottom: 3.2rem;
     padding-left: 10.4rem;
+
+    @media (max-width: $xxl) {
+        font-size: 1.35rem;
+    }
+
+    @media (max-width: $lg) {
+        padding-left: 0;
+        text-decoration: underline;
+
+        &:before {
+            display: none;
+        }
+    }
 }
 
 .intro__title {
@@ -16,6 +41,10 @@
 
     @include font("Playfair Display", 600, 8.8rem, 1.14, $white);
     text-transform: capitalize;
+
+    @media (max-width: $xxl) {
+        font-size: 6.6rem;
+    }
 }
 
 .intro__button {
@@ -23,7 +52,53 @@
 
     position: relative;
 
+    &:before {
+        content: "";
+        display: none;
+        width: 4rem;
+        height: 4rem;
+
+        background-color: transparent;
+        border: 0.1rem solid $white;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+
+        transform: translate(-50%, -50%);
+        transition: background-color 0.1s linear;
+    }
+
     &:hover {
         text-decoration: underline;
+    }
+
+    @media (max-width: $xxl) {
+        font-size: 1.35rem;
+    }
+
+    @media (max-width: $lg) {
+        color: transparent;
+
+        &:before {
+            display: block;
+        }
+
+        & .icon--arrow {
+            top: -0.3rem;
+            right: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        &:hover:before {
+            background-color: $white;
+        }
+
+        &:hover .icon--arrow {
+            fill: $main;
+        }
     }
 }

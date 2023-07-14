@@ -5,14 +5,41 @@
 
     &--even .section__content {
         order: 2;
+        margin-right: 0;
+        margin-left: 6rem;
+    }
+
+    @media (max-width: $lg) {
+        flex-wrap: wrap;
+
+        &--even .section__content {
+            margin-left: 0;
+        }
+
+        &--even .section__preview {
+            order: 2;
+        }
     }
 }
 
 .section__content {
     width: 53.5%;
+    min-width: 70rem;
+    margin-right: 8rem;
     padding: 14rem 0 0 15rem;
 
     position: relative;
+
+    @media (max-width: $xxl) {
+        min-width: 52.5rem;
+        margin-right: 6rem;
+        padding: 11.5rem 0 0 11.25rem;
+    }
+
+    @media (max-width: $lg) {
+        margin-right: 0;
+        margin-bottom: 5rem;
+    }
 }
 
 .section__number {
@@ -22,24 +49,40 @@
     top: 3.8rem;
     left: 0;
     z-index: 1;
+
+    @media (max-width: $xxl) {
+        font-size: 18rem;
+    }
 }
 
 .section__suptitle {
     @include suptitle;
     margin-bottom: 2.7rem;
     padding-left: 9.6rem;
+
+    @media (max-width: $xxl) {
+        font-size: 1.35rem;
+    }
 }
 
 .section__title {
     margin-bottom: 2.7rem;
 
     @include font("Playfair Display", 600, 6.4rem, normal, $white);
+
+    @media (max-width: $xxl) {
+        font-size: 4.8rem;
+    }
 }
 
 .section__text {
     margin-bottom: 2.7rem;
 
     @include font("Roboto", 700, 1.8rem, 1.8, $white);
+
+    @media (max-width: $xxl) {
+        font-size: 1.35rem;
+    }
 }
 
 .section__button {
@@ -50,8 +93,32 @@
     &:hover {
         text-decoration: underline;
     }
+
+    @media (max-width: $xxl) {
+        font-size: 1.35rem;
+    }
 }
 
 .section__preview {
     width: 38.7%;
+    position: relative;
+
+    @media (max-width: $lg) {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.section__preview-img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+
+    transform: translate(0, -50%);
+
+    @media (max-width: $lg) {
+        position: static;
+        transform: none;
+    }
 }
